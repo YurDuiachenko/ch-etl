@@ -1,2 +1,7 @@
 https://ivan-shamaev.ru/how-to-write-data-to-clickhouse-using-python/?ysclid=m0gqz94jh1290667485
 
+https://habr.com/ru/companies/yandex/articles/347696/
+
+https://aiven.io/developer/clickhouse-training-scoring-ai-models
+
+https://mindsdb.com/blog/enabling-predictive-capabilities-in-clickhouse-database#heading-optimizing-the-machine-learning-lifecycle
