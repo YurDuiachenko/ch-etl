@@ -1,0 +1,19 @@
+services:
+    clickhouse-server:
+     image: yandex/clickhouse-server
+     ports:
+     - "8123:8123"
+     - "9000:9000"
+     - "9009:9009"
+     ulimits:
+      nproc: 65535
+      nofile:
+       soft: 262144
+       hard: 262144
+     volumes:
+     - ./cmd:/docker-entrypoint-initdb.d
+     - ./sql:/sql
+
+    clickhouse-client:
+      image: yandex/clickhouse-client
+    
