@@ -1,1 +1,2 @@
 django==1.10.2
+pandahouse==0.2.7
