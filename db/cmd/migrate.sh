@@ -2,8 +2,14 @@
 set -e
 
 run_sql() {
-    sql=$(cat $1)
-    clickhouse-client --query="$sql"
+    sql_file=$(cat $1)
+
+    # local sqls=()
+    # IFS=$'\n\n' read -d '' -ra sqls <<< "$sql_file"
+
+    # for sql in "${sqls[@]}"; do
+    clickhouse-client --query="$sql_file"
+    # done
 }
 
 migrations_dir=./migrations/

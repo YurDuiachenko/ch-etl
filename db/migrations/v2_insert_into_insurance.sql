@@ -1,1 +1,1 @@
-INSERT INTO insurance VALUES (40, true, 25.0, 0, false, 'Москва', 1000.00);
+INSERT INTO insurance VALUES (41, true, 25.0, 0, false, 'Москва', 1000.00);

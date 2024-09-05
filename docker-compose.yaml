@@ -11,9 +11,16 @@ services:
        soft: 262144
        hard: 262144
      volumes:
-     - ./cmd:/docker-entrypoint-initdb.d
-     - ./migrations:/migrations
+     - ./db/cmd:/docker-entrypoint-initdb.d
+     - ./db/migrations:/migrations
 
     clickhouse-client:
       image: yandex/clickhouse-client
     
+    # training:
+    #   depends_on:
+    #   - clickhouse-server
+    #   - clickhouse-client
+    #   build:
+    #     context: .
+    #     dockerfile: Dockerfile
