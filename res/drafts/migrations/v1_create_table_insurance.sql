@@ -1,4 +1,4 @@
-CREATE TABLE insurance (
+CREATE TABLE IF NOT EXISTS insurance (
     age UInt32,
     sex String,
     bmi Float32,

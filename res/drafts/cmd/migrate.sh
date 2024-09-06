@@ -1,8 +1,15 @@
 #!/bin/bash
 set -e
 
-CURRENT_DIR=$(pwd)
+run_sql() {
+    sql_file=$(cat $1)
+    clickhouse-client --query="$sql_file"
+}
 
-for FILE in $(ls); do
-    
-echo "All migrations end up with success"
+migrations_dir=./migrations/
+
+for file in $(ls $migrations_dir); do
+    run_sql $migrations_dir$file
+done
+
+echo "Database inited"
