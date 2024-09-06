@@ -12,6 +12,7 @@ services:
        hard: 262144
      volumes:
      - ./db/cmd:/docker-entrypoint-initdb.d
+     - ./db/data:/data
      - ./db/migrations:/migrations
 
     clickhouse-client:
