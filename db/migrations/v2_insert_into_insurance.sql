@@ -1,1 +1,0 @@
-INSERT INTO insurance FROM INFILE 'data/insurance.csv' FORMAT CSV;

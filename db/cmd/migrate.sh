@@ -6,7 +6,7 @@ run_sql() {
     clickhouse-client --query="$sql_file"
 }
 
-migrations_dir=./migrations/
+migrations_dir=./var/lib/clickhouse/user_files/migrations/
 
 for file in $(ls $migrations_dir); do
     run_sql $migrations_dir$file

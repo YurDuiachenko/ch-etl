@@ -1,4 +1,4 @@
-CREATE TABLE insurance_v1 (
+CREATE TABLE IF NOT EXISTS insurance_v1 (
     age UInt32,
     sex Boolean,
     bmi Float32,
